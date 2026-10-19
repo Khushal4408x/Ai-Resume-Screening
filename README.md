@@ -6,8 +6,6 @@ A web-based application that analyzes resumes against a job description and rank
 
 For a detailed overview of the project, refer to the project document:
 
-[AI-Powered Resume Screening and Ranking System — Project Document](AI-powered-Resume-Screening-and-Ranking-System.pdf)
-
 ## 🚀 Features
 
 - **Resume Screening:** Extract text from PDF resumes and compare it with a job description.

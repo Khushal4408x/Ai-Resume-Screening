@@ -1,8 +1,6 @@
 # AI-powered Resume Screening and Ranking System: Streamline Your Hiring Process
 A web-based application that leverages AI to screen and rank resumes based on job descriptions, making your hiring process efficient and effective.
 
-# 🖼️ Preview
-![image](https://github.com/user-attachments/assets/1277d71c-9f92-4be0-accc-1f52c75efd9c)
 
 # 📑 Project Document
 For a detailed overview of the project, you can refer to the project Document:
@@ -23,7 +21,7 @@ For a detailed overview of the project, you can refer to the project Document:
 
 # 📂 Directory Structure
 ```
-github.com/codewithshek/AI-powered-Resume-Screening-and-Ranking-System/
+https://github.com/Khushal-beep1/Ai-Resume-Screening.git
 ├── Readme.md
 ├── AI-powered-Resume-Screening-and-Ranking-System-PPT.pdf
 └── Main.py
@@ -32,7 +30,7 @@ github.com/codewithshek/AI-powered-Resume-Screening-and-Ranking-System/
 
 1. Clone the Repository
 ```
-git clone https://github.com/codewithshek/AI-powered-Resume-Screening-and-Ranking-System.git
+git clone https://github.com/Khushal-beep1/Ai-Resume-Screening.git
 cd AI-powered-Resume-Screening-and-Ranking-System
 ```
 2. Install Dependencies
@@ -63,4 +61,4 @@ Open your browser and navigate to the generated custom URL like http://localhost
 # 🤝 Contributing
 Feel free to fork and submit pull requests. Any contributions are welcome!
 
-Made with ❤️ by D ABHISHEK YADAV as part of **AICTE- Internship on AI: Transformative Learning with TechSaksham – A joint CSR initiative of Microsoft & SAP, focusing on AI Technologies**
+

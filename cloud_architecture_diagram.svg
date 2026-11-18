@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cloudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="awsBanner" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="vpcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadowBox" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrowDark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="480" rx="12" fill="url(#cloudBg)" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Top Banner -->
+  <rect x="25" y="14" width="870" height="38" rx="8" fill="url(#awsBanner)"/>
+  <text x="460" y="38" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">
+    AWS PRODUCTION CLOUD &amp; DEVOPS ARCHITECTURE (PROPOSED SECURE BLUEPRINT)
+  </text>
+
+  <!-- External Clients & GitHub Actions -->
+  <g transform="translate(30, 65)">
+    <!-- Users -->
+    <rect x="0" y="0" width="130" height="85" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <text x="65" y="22" fill="#1e40af" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">Recruiters / Users</text>
+    <text x="65" y="42" fill="#475569" font-family="sans-serif" font-size="9.5" text-anchor="middle">Web Browsers</text>
+    <text x="65" y="58" fill="#475569" font-family="sans-serif" font-size="9" text-anchor="middle">HTTPS (Port 443)</text>
+    <rect x="15" y="66" width="100" height="14" rx="3" fill="#eff6ff"/>
+    <text x="65" y="77" fill="#2563eb" font-family="sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">TLS 1.3 In-Transit</text>
+
+    <!-- CI/CD GitHub Actions -->
+    <rect x="0" y="110" width="130" height="110" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <text x="65" y="130" fill="#0f172a" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">GitHub Actions</text>
+    <text x="65" y="148" fill="#475569" font-family="sans-serif" font-size="9.5" text-anchor="middle">Automated CI/CD</text>
+    <text x="65" y="164" fill="#475569" font-family="sans-serif" font-size="9" text-anchor="middle">• Python 3.11 Tests</text>
+    <text x="65" y="178" fill="#475569" font-family="sans-serif" font-size="9" text-anchor="middle">• Docker Build &amp; Test</text>
+    <rect x="10" y="190" width="110" height="18" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8"/>
+    <text x="65" y="202" fill="#0f172a" font-family="sans-serif" font-size="8.5" font-weight="600" text-anchor="middle">IAM OIDC Federation</text>
+
+    <!-- Route 53 DNS -->
+    <rect x="0" y="245" width="130" height="85" rx="8" fill="#ffffff" stroke="#c084fc" stroke-width="1.5" filter="url(#shadowBox)"/>
+    <text x="65" y="267" fill="#6b21a8" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">Amazon Route 53</text>
+    <text x="65" y="287" fill="#475569" font-family="sans-serif" font-size="9.5" text-anchor="middle">Public DNS Service</text>
+    <text x="65" y="303" fill="#475569" font-family="sans-serif" font-size="9" text-anchor="middle">Latency Routing</text>
+    <text x="65" y="318" fill="#475569" font-family="sans-serif" font-size="9" text-anchor="middle">Health Checking</text>
+  </g>
+
+  <!-- AWS Cloud Region Boundary -->
+  <g transform="translate(180, 65)">
+    <rect width="715" height="400" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="1.8" stroke-dasharray="6 3"/>
+    <text x="20" y="20" fill="#c2410c" font-family="sans-serif" font-size="11" font-weight="700">AWS Cloud Region (e.g. ap-south-1 / us-east-1)</text>
+
+    <!-- Virtual Private Cloud (VPC) -->
+    <rect x="15" y="30" width="510" height="355" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="30" y="48" fill="#1d4ed8" font-family="sans-serif" font-size="11" font-weight="700">Virtual Private Cloud (VPC: 10.0.0.0/16)</text>
+
+    <!-- Public Subnet (ALB + NAT) -->
+    <rect x="25" y="60" width="490" height="95" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="35" y="77" fill="#1e40af" font-family="sans-serif" font-size="10" font-weight="700">Public Subnets (Multi-AZ: 10.0.1.0/24 &amp; 10.0.2.0/24)</text>
+
+    <!-- ALB Box -->
+    <rect x="40" y="85" width="220" height="60" rx="5" fill="#ffffff" stroke="#60a5fa" stroke-width="1"/>
+    <text x="50" y="103" fill="#1e3a8a" font-family="sans-serif" font-size="10" font-weight="700">Application Load Balancer (ALB)</text>
+    <text x="50" y="118" fill="#475569" font-family="sans-serif" font-size="8.5">• ACM SSL/TLS Termination (HTTPS :443)</text>
+    <text x="50" y="132" fill="#475569" font-family="sans-serif" font-size="8.5">• Sticky Sessions (Streamlit WebSockets)</text>
+
+    <!-- NAT Gateway -->
+    <rect x="280" y="85" width="220" height="60" rx="5" fill="#ffffff" stroke="#60a5fa" stroke-width="1"/>
+    <text x="290" y="103" fill="#1e3a8a" font-family="sans-serif" font-size="10" font-weight="700">NAT Gateway &amp; IGW</text>
+    <text x="290" y="118" fill="#475569" font-family="sans-serif" font-size="8.5">• Outbound Egress for Security Patches</text>
+    <text x="290" y="132" fill="#475569" font-family="sans-serif" font-size="8.5">• Shields Private Instances from Internet</text>
+
+    <!-- Private Subnet (Auto Scaling EC2 with Docker) -->
+    <rect x="25" y="170" width="490" height="205" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+    <text x="35" y="188" fill="#15803d" font-family="sans-serif" font-size="10" font-weight="700">Private Application Subnets (Auto Scaling Group | Multi-AZ)</text>
+
+    <!-- EC2 Instance 1 -->
+    <rect x="40" y="200" width="220" height="160" rx="6" fill="#ffffff" stroke="#4ade80" stroke-width="1.2" filter="url(#shadowBox)"/>
+    <text x="50" y="218" fill="#166534" font-family="sans-serif" font-size="10.5" font-weight="700">EC2 Instance (AZ-1)</text>
+    <text x="50" y="233" fill="#64748b" font-family="sans-serif" font-size="8.5">t3.medium (Amazon Linux 2023)</text>
+
+    <!-- Docker Container 1 inside EC2 -->
+    <rect x="50" y="242" width="200" height="105" rx="5" fill="#f8fafc" stroke="#3b82f6" stroke-width="1"/>
+    <text x="60" y="258" fill="#1e40af" font-family="sans-serif" font-size="9.5" font-weight="700">Docker Engine Container</text>
+    <text x="60" y="273" fill="#475569" font-family="sans-serif" font-size="8.5">• ai-resume-screening:latest</text>
+    <text x="60" y="287" fill="#475569" font-family="sans-serif" font-size="8.5">• Streamlit UI &amp; Core Engine (:8501)</text>
+    <text x="60" y="301" fill="#475569" font-family="sans-serif" font-size="8.5">• Ephemeral In-Memory Processing</text>
+    <rect x="60" y="312" width="180" height="24" rx="3" fill="#ecfdf5" stroke="#34d399" stroke-width="0.8"/>
+    <text x="150" y="328" fill="#047857" font-family="sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">Healthcheck: /_stcore/health</text>
+
+    <!-- EC2 Instance 2 -->
+    <rect x="280" y="200" width="220" height="160" rx="6" fill="#ffffff" stroke="#4ade80" stroke-width="1.2" filter="url(#shadowBox)"/>
+    <text x="290" y="218" fill="#166534" font-family="sans-serif" font-size="10.5" font-weight="700">EC2 Instance (AZ-2 standby/load)</text>
+    <text x="290" y="233" fill="#64748b" font-family="sans-serif" font-size="8.5">t3.medium (High Availability)</text>
+
+    <!-- Docker Container 2 inside EC2 -->
+    <rect x="290" y="242" width="200" height="105" rx="5" fill="#f8fafc" stroke="#3b82f6" stroke-width="1"/>
+    <text x="300" y="258" fill="#1e40af" font-family="sans-serif" font-size="9.5" font-weight="700">Docker Engine Container</text>
+    <text x="300" y="273" fill="#475569" font-family="sans-serif" font-size="8.5">• Redundant Replica Container</text>
+    <text x="300" y="287" fill="#475569" font-family="sans-serif" font-size="8.5">• Streamlit App (:8501)</text>
+    <text x="300" y="301" fill="#475569" font-family="sans-serif" font-size="8.5">• Zero Unencrypted Disk Caching</text>
+    <rect x="300" y="312" width="180" height="24" rx="3" fill="#ecfdf5" stroke="#34d399" stroke-width="0.8"/>
+    <text x="390" y="328" fill="#047857" font-family="sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">Healthcheck: /_stcore/health</text>
+
+    <!-- Supporting AWS Managed Services Column -->
+    <g transform="translate(540, 30)">
+      <!-- AWS ECR -->
+      <rect x="0" y="0" width="160" height="85" rx="6" fill="#fff7ed" stroke="#fb923c" stroke-width="1.2" filter="url(#shadowBox)"/>
+      <text x="12" y="20" fill="#9a3412" font-family="sans-serif" font-size="10.5" font-weight="700">Amazon ECR</text>
+      <text x="12" y="36" fill="#475569" font-family="sans-serif" font-size="8.5">• OCI Container Registry</text>
+      <text x="12" y="50" fill="#475569" font-family="sans-serif" font-size="8.5">• Immutable Image Tags</text>
+      <text x="12" y="64" fill="#475569" font-family="sans-serif" font-size="8.5">• Clair CVE Vulnerability Scan</text>
+
+      <!-- CloudWatch -->
+      <rect x="0" y="95" width="160" height="85" rx="6" fill="#fdf4ff" stroke="#f472b6" stroke-width="1.2" filter="url(#shadowBox)"/>
+      <text x="12" y="115" fill="#831843" font-family="sans-serif" font-size="10.5" font-weight="700">AWS CloudWatch</text>
+      <text x="12" y="131" fill="#475569" font-family="sans-serif" font-size="8.5">• Metrics: CPU, RAM, Network</text>
+      <text x="12" y="145" fill="#475569" font-family="sans-serif" font-size="8.5">• Container Log Streaming</text>
+      <text x="12" y="159" fill="#475569" font-family="sans-serif" font-size="8.5">• Alarms &amp; SNS Notification</text>
+
+      <!-- IAM Security -->
+      <rect x="0" y="190" width="160" height="80" rx="6" fill="#fefce8" stroke="#facc15" stroke-width="1.2" filter="url(#shadowBox)"/>
+      <text x="12" y="210" fill="#854d0e" font-family="sans-serif" font-size="10.5" font-weight="700">AWS IAM Security</text>
+      <text x="12" y="226" fill="#475569" font-family="sans-serif" font-size="8.5">• Instance Profile Roles</text>
+      <text x="12" y="240" fill="#475569" font-family="sans-serif" font-size="8.5">• Principle of Least Privilege</text>
+      <text x="12" y="254" fill="#475569" font-family="sans-serif" font-size="8.5">• No Static Access Keys</text>
+
+      <!-- AWS S3 -->
+      <rect x="0" y="280" width="160" height="75" rx="6" fill="#f0fdfa" stroke="#2dd4bf" stroke-width="1.2" filter="url(#shadowBox)"/>
+      <text x="12" y="300" fill="#115e59" font-family="sans-serif" font-size="10.5" font-weight="700">Amazon S3 (Optional)</text>
+      <text x="12" y="316" fill="#475569" font-family="sans-serif" font-size="8.5">• SSE-KMS Encrypted Storage</text>
+      <text x="12" y="330" fill="#475569" font-family="sans-serif" font-size="8.5">• 24h Lifecycle Auto-Purge</text>
+      <text x="12" y="344" fill="#475569" font-family="sans-serif" font-size="8.5">• Private S3 Bucket Policy</text>
+    </g>
+  </g>
+
+  <!-- Connectors -->
+  <!-- User to ALB -->
+  <line x1="160" y1="105" x2="218" y2="150" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+  <!-- ALB to EC2 AZ-1 and AZ-2 -->
+  <path d="M 330 210 L 330 240 L 250 240 L 250 265" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrowDark)"/>
+  <path d="M 330 210 L 330 240 L 490 240 L 490 265" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrowDark)"/>
+
+  <!-- GitHub Actions to ECR -->
+  <path d="M 160" y1="215" x2="720" y2="120" stroke="#ea580c" stroke-width="1.8" stroke-dasharray="4 2" marker-end="url(#arrowOrange)"/>
+</svg>

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="blueHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="greenHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="900" height="420" rx="12" fill="url(#bgGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Title Banner -->
+  <rect x="25" y="18" width="850" height="42" rx="8" fill="url(#blueHeader)"/>
+  <text x="450" y="44" fill="#ffffff" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="0.5">
+    AI-POWERED RESUME SCREENING &amp; RANKING SYSTEM — APPLICATION ARCHITECTURE
+  </text>
+
+  <!-- Layer 1: Presentation & User Input Layer -->
+  <g transform="translate(35, 75)" filter="url(#dropShadow)">
+    <rect width="250" height="315" rx="10" fill="url(#cardGrad1)" stroke="#bfdbfe" stroke-width="1.5"/>
+    <path d="M 0 10 Q 0 0 10 0 L 240 0 Q 250 0 250 10 L 250 36 L 0 36 Z" fill="url(#blueHeader)"/>
+    <text x="125" y="24" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+      1. Presentation Layer (Streamlit)
+    </text>
+
+    <!-- Sub-elements -->
+    <rect x="15" y="52" width="220" height="60" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+    <text x="25" y="73" fill="#1e3a8a" font-family="sans-serif" font-size="12" font-weight="700">Recruiter Web Browser</text>
+    <text x="25" y="92" fill="#475569" font-family="sans-serif" font-size="10.5">• Responsive CSS &amp; Hero Banner</text>
+    <text x="25" y="105" fill="#475569" font-family="sans-serif" font-size="10.5">• Port 8501 WebSockets &amp; HTTP</text>
+
+    <rect x="15" y="124" width="220" height="80" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+    <text x="25" y="145" fill="#1e3a8a" font-family="sans-serif" font-size="12" font-weight="700">Inputs &amp; Interaction</text>
+    <text x="25" y="164" fill="#475569" font-family="sans-serif" font-size="10.5">• st.text_area (Job Description)</text>
+    <text x="25" y="179" fill="#475569" font-family="sans-serif" font-size="10.5">• st.file_uploader (PDF Resumes)</text>
+    <text x="25" y="194" fill="#475569" font-family="sans-serif" font-size="10.5">• In-Memory Byte Stream (io.BytesIO)</text>
+
+    <rect x="15" y="216" width="220" height="80" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+    <text x="25" y="237" fill="#1e3a8a" font-family="sans-serif" font-size="12" font-weight="700">Dynamic UI Controls</text>
+    <text x="25" y="256" fill="#475569" font-family="sans-serif" font-size="10.5">• Action Validation &amp; Triggers</text>
+    <text x="25" y="271" fill="#475569" font-family="sans-serif" font-size="10.5">• Animated Progress Bars</text>
+    <text x="25" y="286" fill="#475569" font-family="sans-serif" font-size="10.5">• Status &amp; Error Callouts</text>
+  </g>
+
+  <!-- Layer 2: Core Processing & NLP Engine -->
+  <g transform="translate(325, 75)" filter="url(#dropShadow)">
+    <rect width="260" height="315" rx="10" fill="url(#cardGrad1)" stroke="#a7f3d0" stroke-width="1.5"/>
+    <path d="M 0 10 Q 0 0 10 0 L 250 0 Q 260 0 260 10 L 260 36 L 0 36 Z" fill="url(#greenHeader)"/>
+    <text x="130" y="24" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+      2. Core Analytics Engine (NLP)
+    </text>
+
+    <!-- Sub-elements -->
+    <rect x="15" y="52" width="230" height="70" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+    <text x="25" y="73" fill="#065f46" font-family="sans-serif" font-size="12" font-weight="700">PDF Parsing (PyPDF2)</text>
+    <text x="25" y="92" fill="#334155" font-family="sans-serif" font-size="10.5">• Stream parser (PdfReader)</text>
+    <text x="25" y="106" fill="#334155" font-family="sans-serif" font-size="10.5">• Page-by-page text extraction</text>
+
+    <rect x="15" y="132" width="230" height="85" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+    <text x="25" y="153" fill="#065f46" font-family="sans-serif" font-size="12" font-weight="700">TF-IDF Vectorization</text>
+    <text x="25" y="171" fill="#334155" font-family="sans-serif" font-size="10.5">• TfidfVectorizer().fit_transform</text>
+    <text x="25" y="185" fill="#334155" font-family="sans-serif" font-size="10.5">• Term Frequency × Inv. Doc Freq.</text>
+    <text x="25" y="200" fill="#334155" font-family="sans-serif" font-size="10.5">• (N+1) × Vocabulary Matrix</text>
+
+    <rect x="15" y="227" width="230" height="72" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+    <text x="25" y="247" fill="#065f46" font-family="sans-serif" font-size="12" font-weight="700">Cosine Similarity Scoring</text>
+    <text x="25" y="266" fill="#334155" font-family="sans-serif" font-size="10.5">• Dot product: (v_jd · v_res)</text>
+    <text x="25" y="281" fill="#334155" font-family="sans-serif" font-size="10.5">• Normalized score: (0.00 – 100.0%)</text>
+  </g>
+
+  <!-- Layer 3: Results & Analytics Output Layer -->
+  <g transform="translate(625, 75)" filter="url(#dropShadow)">
+    <rect width="240" height="315" rx="10" fill="url(#cardGrad1)" stroke="#ddd6fe" stroke-width="1.5"/>
+    <path d="M 0 10 Q 0 0 10 0 L 230 0 Q 240 0 240 10 L 240 36 L 0 36 Z" fill="url(#purpleHeader)"/>
+    <text x="120" y="24" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+      3. Aggregation &amp; Output
+    </text>
+
+    <!-- Sub-elements -->
+    <rect x="15" y="52" width="210" height="70" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+    <text x="25" y="73" fill="#581c87" font-family="sans-serif" font-size="12" font-weight="700">pandas Ranking Engine</text>
+    <text x="25" y="92" fill="#334155" font-family="sans-serif" font-size="10.5">• DataFrame generation &amp; sort</text>
+    <text x="25" y="106" fill="#334155" font-family="sans-serif" font-size="10.5">• Rank 1..N order assignment</text>
+
+    <rect x="15" y="132" width="210" height="75" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+    <text x="25" y="153" fill="#581c87" font-family="sans-serif" font-size="12" font-weight="700">Classification Badges</text>
+    <text x="25" y="172" fill="#334155" font-family="sans-serif" font-size="10.5">• Strong Match (≥ 70%)</text>
+    <text x="25" y="186" fill="#334155" font-family="sans-serif" font-size="10.5">• Moderate Match (40–69%)</text>
+    <text x="25" y="200" fill="#334155" font-family="sans-serif" font-size="10.5">• Low Match (&lt; 40%)</text>
+
+    <rect x="15" y="217" width="210" height="82" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+    <text x="25" y="238" fill="#581c87" font-family="sans-serif" font-size="12" font-weight="700">Export &amp; Display</text>
+    <text x="25" y="257" fill="#334155" font-family="sans-serif" font-size="10.5">• st.dataframe visual table</text>
+    <text x="25" y="272" fill="#334155" font-family="sans-serif" font-size="10.5">• Metrics summary cards (4x)</text>
+    <text x="25" y="287" fill="#334155" font-family="sans-serif" font-size="10.5">• CSV download button</text>
+  </g>
+
+  <!-- Connectors -->
+  <!-- Layer 1 to Layer 2 -->
+  <line x1="285" y1="180" x2="323" y2="180" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <rect x="286" y="162" width="35" height="16" rx="3" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.8"/>
+  <text x="303" y="174" fill="#1e40af" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">TEXT</text>
+
+  <!-- Layer 2 to Layer 3 -->
+  <line x1="585" y1="180" x2="623" y2="180" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="586" y="162" width="36" height="16" rx="3" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="0.8"/>
+  <text x="604" y="174" fill="#065f46" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">SCORE</text>
+
+</svg>

@@ -77,7 +77,27 @@ python -m pip install -r requirements.txt
 streamlit run Main.py
 ```
 
-### 5. Open the Application
+### 5. Run with Docker (Optional)
+
+You can containerize and run the application using Docker:
+
+```bash
+# Build the Docker image
+docker build -t ai-resume-screening .
+
+# Run the container mapping port 8501
+docker run -p 8501:8501 ai-resume-screening
+```
+
+### 6. Run Automated Tests
+
+Execute the unit test suite covering PDF extraction, TF-IDF ranking, similarity scoring, and ranking order:
+
+```bash
+python -m unittest discover tests -v
+```
+
+### 7. Open the Application
 
 Streamlit will display a local URL in your terminal, usually:
 
@@ -86,6 +106,14 @@ http://localhost:8501
 ```
 
 Open this URL in your browser to start screening resumes.
+
+## 🔄 CI/CD Automation
+
+This project integrates **GitHub Actions** (`.github/workflows/ci-cd.yml`) to automatically:
+1. Lint and validate Python syntax using `flake8` and `py_compile`.
+2. Run the automated test suite across Python 3.11.
+3. Build and validate the Docker container with integrated health checking (`/_stcore/health`).
+4. Stage continuous cloud deployment to Amazon ECR / EC2.
 
 ## 🔍 How It Works
 

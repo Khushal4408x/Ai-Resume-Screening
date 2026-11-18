@@ -312,45 +312,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Function to extract text from PDF
-def extract_text_from_pdf(file):
-    pdf = PdfReader(file)
-    text = ""
-    for page in pdf.pages:
-        page_text = page.extract_text()
-        if page_text:
-            text += page_text
-    return text
-
-
-# Function to rank resumes based on job description
-def rank_resumes(job_description, resumes):
-    documents = [job_description] + resumes
-    vectorizer = TfidfVectorizer().fit_transform(documents)
-    vectors = vectorizer.toarray()
-
-    job_description_vector = vectors[0]
-    resume_vectors = vectors[1:]
-    cosine_similarities = cosine_similarity([job_description_vector], resume_vectors).flatten()
-
-    scores = (cosine_similarities * 100).round(2)
-    return scores
-
-
-def get_score_class(score):
-    if score >= 70:
-        return "score-high"
-    elif score >= 40:
-        return "score-medium"
-    return "score-low"
-
-
-def get_badge(score):
-    if score >= 70:
-        return '<span class="badge badge-success">Strong Match</span>'
-    elif score >= 40:
-        return '<span class="badge badge-warning">Moderate Match</span>'
-    return '<span class="badge badge-info">Low Match</span>'
+# Core processing functions imported from modular resume_utils
+from resume_utils import (
+    extract_text_from_pdf,
+    rank_resumes,
+    get_score_class,
+    get_badge
+)
 
 
 # ---- HERO SECTION ----
@@ -569,7 +537,7 @@ if process_clicked and can_process:
                 format="%.1f",
                 width="medium"
             ),
-            "Match Level": st.column_config.TextColumn("🎯 Match", width="medium"),
+            "Match Level": st.column_config.MarkdownColumn("🎯 Match", width="medium"),
         }
     )
 

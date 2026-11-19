@@ -3,8 +3,8 @@
 # Subject: DevOps and Cloud Computing (BCDS0501) - Assignment 3
 # ==============================================================================
 
-# Official lightweight Python base image
-FROM python:3.11-slim
+# Official lightweight Python base image (Python 3.12 matches modern dependencies)
+FROM python:3.12-slim
 
 # Prevent Python from writing .pyc files and buffering stdout/stderr
 ENV PYTHONDONTWRITEBYTECODE=1 \

@@ -317,7 +317,9 @@ from resume_utils import (
     extract_text_from_pdf,
     rank_resumes,
     get_score_class,
-    get_badge
+    get_badge,
+    format_results_dataframe,
+    generate_csv_bytes
 )
 
 
@@ -513,14 +515,7 @@ if process_clicked and can_process:
     """, unsafe_allow_html=True)
 
     # Create results dataframe with enhanced display
-    results = pd.DataFrame({
-        "Rank": range(1, len(uploaded_files) + 1),
-        "Resume": [f.name for f in uploaded_files],
-        "Score": scores,
-        "Match Level": [get_badge(s) for s in scores]
-    }).sort_values(by="Score", ascending=False).reset_index(drop=True)
-
-    results["Rank"] = range(1, len(results) + 1)
+    results = format_results_dataframe([f.name for f in uploaded_files], scores)
 
     # Display as styled dataframe
     st.dataframe(
@@ -543,7 +538,7 @@ if process_clicked and can_process:
 
     # ---- DOWNLOAD RESULTS ----
     st.markdown("<br>", unsafe_allow_html=True)
-    csv = results.drop(columns=["Match Level"]).to_csv(index=False).encode('utf-8')
+    csv = generate_csv_bytes(results)
     st.download_button(
         label="📥 Download Results as CSV",
         data=csv,

@@ -29,7 +29,7 @@
   <!-- Banner -->
   <rect x="25" y="16" width="870" height="40" rx="8" fill="url(#bannerGrad)"/>
   <text x="460" y="41" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0.5">
-    PRACTICAL CI/CD PIPELINE ARCHITECTURE (GITHUB ACTIONS &amp; DOCKER)
+    IMPLEMENTED CI/CD &amp; CLOUD PUBLISHING PIPELINE (GITHUB ACTIONS, DOCKER &amp; AWS ECR)
   </text>
 
   <!-- Stage 1: Developer Workstation -->
@@ -40,14 +40,14 @@
 
     <rect x="12" y="48" width="156" height="65" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
     <text x="20" y="68" fill="#0f172a" font-family="sans-serif" font-size="11" font-weight="700">Developer Tasks</text>
-    <text x="20" y="86" fill="#475569" font-family="sans-serif" font-size="10">• Python 3.11 VirtualEnv</text>
-    <text x="20" y="100" fill="#475569" font-family="sans-serif" font-size="10">• Feature modification</text>
+    <text x="20" y="86" fill="#475569" font-family="sans-serif" font-size="10">• Python 3.12 Runtime</text>
+    <text x="20" y="100" fill="#475569" font-family="sans-serif" font-size="10">• Modular code &amp; tests</text>
 
     <rect x="12" y="125" width="156" height="75" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
     <text x="20" y="145" fill="#0f172a" font-family="sans-serif" font-size="11" font-weight="700">Git Version Control</text>
     <text x="20" y="163" fill="#475569" font-family="sans-serif" font-size="10">• git add / commit</text>
-    <text x="20" y="177" fill="#475569" font-family="sans-serif" font-size="10">• Branch: main/features</text>
-    <text x="20" y="191" fill="#475569" font-family="sans-serif" font-size="10">• Local test execution</text>
+    <text x="20" y="177" fill="#475569" font-family="sans-serif" font-size="10">• Branch: main</text>
+    <text x="20" y="191" fill="#475569" font-family="sans-serif" font-size="10">• 13 pytest suites run</text>
 
     <rect x="12" y="212" width="156" height="85" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
     <text x="20" y="232" fill="#1e40af" font-family="sans-serif" font-size="11" font-weight="700">Push to Remote</text>
@@ -74,7 +74,7 @@
     <rect x="12" y="135" width="166" height="85" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
     <text x="20" y="155" fill="#1e3a8a" font-family="sans-serif" font-size="11" font-weight="700">Python Environment</text>
     <text x="20" y="173" fill="#334155" font-family="sans-serif" font-size="10">• actions/setup-python@v5</text>
-    <text x="20" y="187" fill="#334155" font-family="sans-serif" font-size="10">• Version: 3.11 Runtime</text>
+    <text x="20" y="187" fill="#334155" font-family="sans-serif" font-size="10">• Version: 3.12 Runtime</text>
     <text x="20" y="201" fill="#334155" font-family="sans-serif" font-size="10">• pip cache restore</text>
 
     <rect x="12" y="232" width="166" height="65" rx="5" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
@@ -99,41 +99,41 @@
     <text x="20" y="114" fill="#334155" font-family="sans-serif" font-size="10">• Undefined variable check</text>
 
     <rect x="12" y="135" width="166" height="100" rx="5" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
-    <text x="20" y="155" fill="#065f46" font-family="sans-serif" font-size="11" font-weight="700">Automated Unit Tests</text>
-    <text x="20" y="173" fill="#334155" font-family="sans-serif" font-size="10">• unittest discover tests</text>
-    <text x="20" y="187" fill="#334155" font-family="sans-serif" font-size="10">• PDF text extraction test</text>
-    <text x="20" y="201" fill="#334155" font-family="sans-serif" font-size="10">• TF-IDF cosine score test</text>
-    <text x="20" y="215" fill="#334155" font-family="sans-serif" font-size="10">• Ranking order &amp; badges</text>
+    <text x="20" y="155" fill="#065f46" font-family="sans-serif" font-size="11" font-weight="700">Pytest Suite</text>
+    <text x="20" y="173" fill="#334155" font-family="sans-serif" font-size="10">• pytest tests/ -v</text>
+    <text x="20" y="187" fill="#334155" font-family="sans-serif" font-size="10">• PDF extraction &amp; edge cases</text>
+    <text x="20" y="201" fill="#334155" font-family="sans-serif" font-size="10">• TF-IDF cosine score bounds</text>
+    <text x="20" y="215" fill="#334155" font-family="sans-serif" font-size="10">• CSV export logic verified</text>
 
     <rect x="12" y="247" width="166" height="50" rx="5" fill="#d1fae5" stroke="#34d399" stroke-width="1"/>
     <text x="95" y="268" fill="#065f46" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">STATUS: PASSED</text>
-    <text x="95" y="284" fill="#047857" font-family="sans-serif" font-size="9.5" text-anchor="middle">7/7 Tests Succeeded (0.21s)</text>
+    <text x="95" y="284" fill="#047857" font-family="sans-serif" font-size="9.5" text-anchor="middle">13/13 Tests Succeeded (1.5s)</text>
   </g>
 
   <!-- Arrow 3 -> 4 -->
   <line x1="670" y1="240" x2="708" y2="240" stroke="#059669" stroke-width="2" marker-end="url(#arrowHead)"/>
 
-  <!-- Stage 4: Docker Build & Future Cloud Deploy -->
+  <!-- Stage 4: Docker Build & ECR Cloud Deploy -->
   <g transform="translate(710, 80)" filter="url(#shadow)">
     <rect width="180" height="320" rx="8" fill="url(#boxGrad1)" stroke="#fed7aa" stroke-width="1.5"/>
     <path d="M 0 8 Q 0 0 8 0 L 172 0 Q 180 0 180 8 L 180 34 L 0 34 Z" fill="#d97706"/>
-    <text x="90" y="22" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">4. Docker &amp; Cloud CD</text>
+    <text x="90" y="22" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">4. Docker &amp; AWS ECR</text>
 
     <rect x="12" y="48" width="156" height="90" rx="5" fill="#fffbeb" stroke="#fcd34d" stroke-width="1"/>
     <text x="20" y="68" fill="#92400e" font-family="sans-serif" font-size="11" font-weight="700">Docker Image Build</text>
     <text x="20" y="86" fill="#334155" font-family="sans-serif" font-size="10">• docker buildx build</text>
-    <text x="20" y="100" fill="#334155" font-family="sans-serif" font-size="10">• Base: python:3.11-slim</text>
+    <text x="20" y="100" fill="#334155" font-family="sans-serif" font-size="10">• Base: python:3.12-slim</text>
     <text x="20" y="114" fill="#334155" font-family="sans-serif" font-size="10">• Non-root user (appuser)</text>
     <text x="20" y="128" fill="#334155" font-family="sans-serif" font-size="10">• Healthcheck validated</text>
 
-    <rect x="12" y="148" width="156" height="150" rx="5" fill="#fff7ed" stroke="#fdba74" stroke-width="1" stroke-dasharray="4 2"/>
-    <text x="20" y="168" fill="#c2410c" font-family="sans-serif" font-size="11" font-weight="700">Future CD (Proposed)</text>
-    <text x="20" y="186" fill="#64748b" font-family="sans-serif" font-size="10">• AWS OIDC Federation</text>
-    <text x="20" y="200" fill="#64748b" font-family="sans-serif" font-size="10">• Push to Amazon ECR</text>
-    <text x="20" y="214" fill="#64748b" font-family="sans-serif" font-size="10">• Deploy on EC2 Host</text>
-    <text x="20" y="228" fill="#64748b" font-family="sans-serif" font-size="10">• Zero-downtime rolling</text>
-    <text x="20" y="248" fill="#b45309" font-family="sans-serif" font-size="9" font-style="italic">*(Awaiting AWS secrets)*</text>
-    <rect x="25" y="260" width="130" height="24" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="0.8"/>
-    <text x="90" y="276" fill="#b45309" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">CD STAGE READY</text>
+    <rect x="12" y="148" width="156" height="150" rx="5" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+    <text x="20" y="168" fill="#065f46" font-family="sans-serif" font-size="11" font-weight="700">Amazon ECR (Pushed)</text>
+    <text x="20" y="186" fill="#334155" font-family="sans-serif" font-size="9.5">• Region: ap-south-1</text>
+    <text x="20" y="200" fill="#334155" font-family="sans-serif" font-size="9.5">• 700017004419.dkr.ecr</text>
+    <text x="20" y="214" fill="#334155" font-family="sans-serif" font-size="9.5">• Tags: latest, v1.0.0</text>
+    <text x="20" y="228" fill="#334155" font-family="sans-serif" font-size="9.5">• Digest: sha256:ea55...</text>
+    <rect x="20" y="246" width="140" height="22" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="0.8"/>
+    <text x="90" y="261" fill="#047857" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">ECR PUSH VERIFIED</text>
+    <text x="90" y="284" fill="#64748b" font-family="sans-serif" font-size="8.5" text-anchor="middle">EC2: Prepared (Approval req.)</text>
   </g>
 </svg>
